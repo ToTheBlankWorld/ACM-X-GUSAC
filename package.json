@@ -1,0 +1,28 @@
+{
+  "name": "webshield-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WebShield Lab — local-only educational cybersecurity lab demonstrating SQL Injection and XSS against a fictional store (NovaCart). INTENTIONALLY VULNERABLE — EDUCATIONAL LOCAL LAB.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "test": "npm test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.21.5": true
+  }
+}

@@ -1,0 +1,19 @@
+# WebShield Lab (NovaCart) — Python requirements
+#
+# start.py runs on the Python standard library ONLY.
+# There are no third-party Python packages to install:
+#   pip install -r requirements.txt   ->  nothing to install (this is expected)
+#
+# Requires Python 3.9+
+#
+# --- Runtime requirements (not installable via pip) ---
+#   Node.js >= 20  (npm >= 9)   -> JavaScript dependencies live in package.json
+#     npm install                (workspaces: server + client)
+#   npm test                     (35 backend tests)
+#   npm run build                (production frontend build)
+#
+# --- Pinned JS dependencies (see package.json / package-lock.json) ---
+#   server: express ^4.19.2, better-sqlite3 ^12.2.0
+#   client: react ^18.3.1, react-dom ^18.3.1, react-router-dom ^6.26.2,
+#           framer-motion ^11.11.0, tailwindcss ^3.4.13, vite ^5.4.8
+#   root:   concurrently ^9.1.0
